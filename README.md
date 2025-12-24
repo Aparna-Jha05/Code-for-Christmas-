@@ -1,4 +1,4 @@
-# AIRDROP-TRUST-PROTOCOL
+# AIRDROP-TRUST-PROTOCOL 😎
 
 > Open Terminal (1)
 ``` 
