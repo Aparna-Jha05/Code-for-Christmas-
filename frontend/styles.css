@@ -1,0 +1,168 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  background: #0d1117;
+  color: #e6edf3;
+  padding: 40px;
+}
+
+/* Page container */
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Headings */
+h1 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: #8b949e;
+  margin-bottom: 32px;
+}
+
+h2 {
+  font-size: 22px;
+  /* Margins are now handled by .card-header for better alignment */
+  margin: 0;
+}
+
+/* Section cards */
+.card {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 14px;
+  padding: 24px;
+  margin-bottom: 28px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Card Header Layout - Aligns Title and Badge */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+/* Input */
+textarea {
+  width: 100%;
+  min-height: 80px;
+  padding: 12px;
+  background: #161b22;
+  color: #e6edf3;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  resize: vertical;
+}
+
+/* Tables */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #0d1117;   /* darker than card */
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 14px 16px;
+  text-align: left;
+  vertical-align: top;
+  line-height: 1.6;
+  word-break: break-word;
+  white-space: normal;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+/* Risk colors & Badge Styling */
+.badge {
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+  
+  /* Default Badge Style (Visible on dark background) */
+  background: #21262d; 
+  border: 1px solid #30363d;
+  color: #c9d1d9;
+}
+
+/* Specific Risk Levels */
+.low {
+  background: #238636;
+  color: white;
+  border: 1px solid #2ea043;
+}
+
+.medium {
+  background: #d29922;
+  color: black;
+  border: 1px solid #dbab09;
+}
+
+.high {
+  background: #da3633;
+  color: white;
+  border: 1px solid #f85149;
+}
+
+/* Loader */
+.loader {
+  border: 3px solid #30363d;
+  border-top: 3px solid #58a6ff;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto 10px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.status-text {
+  text-align: center;
+  color: #8b949e;
+  font-size: 14px;
+  margin-bottom: 20px;
+  min-height: 20px;
+}
+
+/* Utility */
+.hidden {
+  display: none !important;
+}
+
+.hint {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #8b949e;
+}
+
+/* Footer note */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 13px;
+  color: #484f58;
+}

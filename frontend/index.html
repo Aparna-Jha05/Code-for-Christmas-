@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Airdrop Trust Protocol</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <h1>Sybil-Resistant Airdrop</h1>
+    <p class="subtitle">Automated Trust Analysis & On-Chain Enforcement</p>
+  </header>
+
+  <!-- Input -->
+  <section class="card">
+    <div class="card-header">
+      <h2>Wallet IDs</h2>
+      <span class="badge">Input</span>
+    </div>
+    <div class="card-body">
+      <textarea
+        id="wallets"
+        placeholder="Paste wallet IDs (one per line)…"
+        rows="4"
+      ></textarea>
+      <p class="hint">Analysis runs automatically after input.</p>
+    </div>
+  </section>
+
+  <!-- Loader -->
+  <div id="loader" class="loader hidden"></div>
+  <p id="statusText" class="status-text"></p>
+
+  <!-- Analysis -->
+  <section class="card hidden" id="analysisSection">
+    <div class="card-header">
+      <h2>Risk Analysis</h2>
+      <span class="badge">Off-chain</span>
+    </div>
+    <div class="table-wrapper">
+      <table id="analysisTable">
+        <thead>
+          <tr>
+            <th>Wallet</th>
+            <th>Score</th>
+            <th>Bucket</th>
+            <th>Explanation</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Airdrop -->
+  <section class="card hidden" id="airdropSection">
+    <div class="card-header">
+      <h2>Airdrop Distribution</h2>
+      <span class="badge">On-chain</span>
+    </div>
+    <div class="table-wrapper">
+      <table id="airdropTable">
+        <thead>
+          <tr>
+            <th>Wallet</th>
+            <th>Bucket</th>
+            <th>Tokens</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer>
+    <p>ML detects · AI explains · Blockchain enforces</p>
+  </footer>
+</div>
+
+<script src="api.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
