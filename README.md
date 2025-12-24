@@ -8,6 +8,7 @@ pip install -r requirements.txt
 ```
 ```
 cd blockchain
+npm install
 npx hardhat node
 ```
 > Open Terminal (2)
